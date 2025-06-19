@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-font: "Open Sans", "sans-serif";
+  --secondary-font: "Playfair Display", "serif";
+  --color-primary: #fff;
+  --color-grey: #eeeeee;
+  --color-black-main: #000000;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 62.5%;
+  font-family: var(--primary-font);
+}
+.todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-list-heading {
+  font-size: 5rem;
+}
+.todo-list {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 90%;
+}
+.todo-item {
+  background: var(--color-grey);
+  display: flex;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4rem;
+  font-style: italic;
+  width: 50%;
+}
+.todo-item-name {
+  color: var(--color-black-main);
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.todo-item-description {
+  font-size: 2rem;
+}
+.todo-item-status {
+  background: var(--color-black-main);
+  border-radius: 60%;
+  font-size: 3rem;
+}
+.todo-form {
+  display: flex;
+  gap: 2rem;
+  text-transform: capitalize;
+}
+.todo-form input {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.todo-form button {
+  font-family: inherit;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}

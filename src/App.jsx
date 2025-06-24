@@ -6,9 +6,10 @@ import { TodoContextProvider } from "./context/TodoContextProvider";
 function App() {
   return (
     <div className="todo">
-      <h1 className="todo-list-heading">All Tasks</h1>
       <TodoContextProvider>
-        <InputForm />
+        <div className="todo-header">
+          <InputForm />
+        </div>
         <TodoList />
       </TodoContextProvider>
     </div>

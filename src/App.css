@@ -5,8 +5,9 @@
 }
 :root {
   --primary-font: "Open Sans", "sans-serif";
-  --secondary-font: "Playfair Display", "serif";
   --color-primary: #fff;
+  --color-mint: #1dcd9f;
+  --color-green: #b6ffa1;
   --color-grey: #eeeeee;
   --color-black-main: #000000;
   scroll-behavior: smooth;
@@ -15,13 +16,18 @@ html {
   font-size: 62.5%;
   font-family: var(--primary-font);
 }
+.todo-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem;
+  align-items: center;
+  background: var(--color-mint);
+}
 .todo {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.todo-list-heading {
-  font-size: 5rem;
 }
 .todo-list {
   padding: 2rem 1rem;
@@ -32,23 +38,21 @@ html {
   width: 90%;
 }
 .todo-item {
-  background: var(--color-grey);
+  background: var(--color-primary);
   display: flex;
   padding: 1rem 2rem;
   gap: 2rem;
   justify-content: space-between;
   align-items: center;
-  border-radius: 4rem;
+  border-radius: 0.5rem;
   font-style: italic;
-  width: 50%;
+  box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.3);
+  width: 100%;
 }
 .todo-item-name {
   color: var(--color-black-main);
-  font-size: 3rem;
-  text-transform: capitalize;
-}
-.todo-item-description {
   font-size: 2rem;
+  text-transform: capitalize;
 }
 .todo-item-status {
   background: var(--color-black-main);
@@ -57,17 +61,40 @@ html {
 }
 .todo-form {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
   text-transform: capitalize;
 }
 .todo-form input {
   font-family: inherit;
+  background: var(--color-green);
+  color: var(--color-black-main);
   padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  border: none;
+  width: 75%;
+  border-radius: 0.5rem;
+}
+
+.todo-form input:focus {
+  border: none;
+  outline: none;
+}
+.todo-form input::placeholder {
+  font: inherit;
+  font-size: 2rem;
+  border: none;
+  color: grey;
 }
 
 .todo-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-family: inherit;
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
+  font-size: 6rem;
+  border-radius: 50%;
+  border: none;
 }

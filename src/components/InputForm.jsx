@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTodo } from "../context/TodoContext.jsx";
+import { CgAdd } from "react-icons/cg";
 
 export function InputForm() {
   const [todo, setTodo] = useState("");
@@ -8,7 +9,7 @@ export function InputForm() {
     <form className="todo-form">
       <input
         type="text"
-        placeholder="Tasks"
+        placeholder="Enter you today task ..."
         value={todo}
         onChange={(e) => {
           setTodo(e.target.value);
@@ -23,7 +24,7 @@ export function InputForm() {
           setTodo("");
         }}
       >
-        add
+        <CgAdd />
       </button>
     </form>
   );

@@ -7,7 +7,7 @@
   --primary-font: "Open Sans", "sans-serif";
   --color-primary: #fff;
   --color-mint: #1dcd9f;
-  --color-green: #b6ffa1;
+  --color-green: #c1f4c5;
   --color-grey: #eeeeee;
   --color-black-main: #000000;
   scroll-behavior: smooth;
@@ -54,6 +54,12 @@ html {
   font-size: 2rem;
   text-transform: capitalize;
 }
+.todo-item-name-completed {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: grey;
+  text-decoration: line-through;
+}
 .todo-item-status {
   background: var(--color-black-main);
   border-radius: 60%;
@@ -97,4 +103,9 @@ html {
   font-size: 6rem;
   border-radius: 50%;
   border: none;
+}
+.todo-item-status {
+  display: flex;
+  font-size: 3rem;
+  color: var(--color-mint);
 }
